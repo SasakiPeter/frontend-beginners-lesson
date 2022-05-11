@@ -70,13 +70,33 @@ article > section {
   padding: 2rem;
 }
 
+/* article > section {
+  display: grid;
+  grid-template:
+    "hedding image" auto
+    "message image" auto/
+    auto auto;
+  place-content: center;
+}
+
+article > section > h2 {
+  grid-area: hedding;
+}
+article > section > p {
+  grid-area: message;
+}
+
+article > section > img {
+  grid-area: image;
+} */
+
 article > section > div {
   display: flex;
   flex-direction: column;
   padding: 2rem;
 }
 
-article > section > div > h2 {
+article > section h2 {
   color: rgb(68, 184, 184);
 }
 
@@ -85,7 +105,7 @@ article > section img {
   object-fit: contain;
 }
 
-article > section:nth-child(2n + 1) {
+article > section:nth-child(odd) {
   flex-direction: row-reverse;
 }
 
@@ -151,3 +171,32 @@ footer {
     width: 300px;
   }
 }
+
+/* 左右中央揃えにするとき
+main {
+  width: min(100%, 980px);
+  margin: 0 auto;
+}
+
+section {
+  display: grid;
+  grid-template:
+    "title image" auto
+    "text image" auto/
+    1fr 400px;
+  gap: 20px;
+}
+
+section h2 {
+  grid-area: title;
+  align-self: flex-end;
+}
+
+section p {
+  grid-area: text;
+}
+
+section img {
+  grid-area: image;
+  width: 100%;
+} */
