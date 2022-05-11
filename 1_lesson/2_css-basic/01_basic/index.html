@@ -3,10 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <title>CSSのスタイル設定</title>
+    <!-- <style>
+      h1 {
+        color: hotpink;
+      }
+      p {
+        font-size: 50px;
+        font-weight: bold;
+      }
+    </style> -->
+    <style>
+      .box {
+        border: 1px solid red;
+      }
+      li:nth-child(2) {
+        color: #f00;
+      }
+
+      .box:nth-of-type(2) {
+        border: 2px solid black;
+      }
+      a:hover {
+        color: red;
+      }
+      button:disabled {
+        color: red;
+      }
+      input::placeholder {
+        color: red;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <a href="#">リンク</a>
     <h1>鈴木さんのページです</h1>
     <p>こんにちは</p>
     <div class="box">BOX</div>
+    <div class="box">BOX2</div>
+    <ul>
+      <li>りんご</li>
+      <li>ばなな</li>
+      <li>すいか</li>
+    </ul>
+
+    <input type="text" placeholder="holder" />
+    <button disabled>ボタン</button>
   </body>
 </html>
