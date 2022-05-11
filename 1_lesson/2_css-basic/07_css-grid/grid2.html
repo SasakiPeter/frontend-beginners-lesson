@@ -17,13 +17,21 @@
       .container {
         height: 100%;
         display: grid;
-        /* 3列 */
-        grid-template-columns: repeat(3, 1fr);
-        /* できるだけ敷き詰める */
+        /*!* 3列 *!*/
+
+        /*grid-template:*/
+        /*  repeat(3, 100px) /*/
+        /*  repeat(6, 1fr);*/
+
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 10px;
+
+        /*grid-template-columns: repeat(3, 1fr);*/
+        /*!* できるだけ敷き詰める *!*/
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
-        /* 隙間 */
-        gap: 5px;
+        /*!* 隙間 *!*/
+        /*gap: 5px;*/
       }
 
       .box {

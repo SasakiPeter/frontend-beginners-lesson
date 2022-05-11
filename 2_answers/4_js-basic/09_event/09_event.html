@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>イベント処理</title>
+  </head>
+  <body>
+    <div>
+      <button class="button">ボタン</button>
+    </div>
+
+    <script>
+      // イベントの設定
+      document.querySelector(".button").addEventListener("click", (event) => {
+        // イベントリスナー
+        alert("こんにちは");
+      });
+
+      // mouseenterイベント
+      document
+        .querySelector(".button")
+        .addEventListener("mouseenter", (event) => {
+          console.log("こんにちは");
+        });
+
+      // クリックされた要素
+      document.querySelector(".button").addEventListener("click", (event) => {
+        console.log(event.target);
+        console.log(event.target.innerHTML);
+      });
+
+      window.addEventListener("scroll", () => {
+        console.log("スクロールされました");
+      });
+
+      // DOMContentLoadedイベント
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM操作できます");
+      });
+    </script>
+  </body>
+</html>

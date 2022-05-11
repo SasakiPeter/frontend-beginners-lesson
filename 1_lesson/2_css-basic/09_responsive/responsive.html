@@ -24,6 +24,18 @@
           1fr 500px;
       }
 
+      @media (max-width: 600px) {
+        /* ウインドウサイズ600px以下のときだけに適用されるCSS  */
+
+        .container {
+          grid-template:
+          "title" 40px
+          "text" auto
+          "box" auto /
+          1fr;
+        }
+      }
+
       .title {
         grid-area: title;
         background-color: lightblue;

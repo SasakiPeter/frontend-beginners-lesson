@@ -16,27 +16,46 @@
 
       .container {
         height: 100%;
-        display: grid;
-
-        grid-template:
-          "title title" 40px
-          "text box" 1fr /
-          1fr 500px;
+        /*display: grid;*/
+        /*grid-template:*/
+        /*  "title title" 40px*/
+        /*  "text box" 1fr /*/
+        /*  1fr 500px;*/
       }
 
       .title {
-        grid-area: title;
         background-color: lightblue;
       }
 
       .text {
-        grid-area: text;
         background-color: lightskyblue;
       }
 
       .box {
-        grid-area: box;
         background-color: lightcoral;
+      }
+
+      .container {
+        /* CSS Gridにしますよ、という宣言 */
+        display: grid;
+
+        /* 行列をどうしますか？を決める。行列の名前とサイズを入れる */
+        grid-template:
+          "title title" 60px
+          "text box" 1fr
+          / 1fr 120px;
+      }
+
+      .title {
+        grid-area: title;
+      }
+
+      .text {
+        grid-area: text;
+      }
+
+      .box {
+        grid-area: box;
       }
     </style>
   </head>

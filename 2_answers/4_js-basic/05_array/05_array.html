@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>配列</title>
+    <script>
+      // 鈴木, 田中, 後藤からなる配列を作ってください
+      const myArray = ["鈴木", "田中", "後藤"];
+      // 2番目の値にアクセスしてください
+      console.log(myArray[1]);
+      // 2番目の値を「マリオ」に書き換えてください
+      console.log((myArray[1] = "マリオ"));
+
+      // すべての値を出力してください
+      for (const value of myArray) {
+        console.log(value);
+      }
+
+      for (let i = 0; i < myArray.length; i++) {
+        console.log(myArray[i]);
+      }
+
+      myArray.forEach((value) => {
+        console.log(value);
+      });
+
+      // 「後藤」が含まれているか判定してください
+      console.log(myArray.includes("後藤"));
+
+      // すべての値に「さん」をつけてください
+      console.log(myArray.map((value) => value + "さん"));
+
+      // 「木」を含む要素を見つけてください
+      console.log(myArray.find((value) => value.includes("木")));
+      console.log(myArray.findIndex((value) => value.includes("木")));
+
+      // 「森」を含む要素を見つけてください
+      console.log(myArray.find((value) => value.includes("森")));
+      console.log(myArray.findIndex((value) => value.includes("森")));
+    </script>
+  </head>
+  <body></body>
+</html>

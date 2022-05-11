@@ -3,10 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <title>CSSのスタイル設定</title>
+    <style>
+      .box {
+      }
+
+      li:first-child {
+        color: #f00;
+      }
+
+      .box:first-of-type {
+        border: 2px solid black;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      button:disabled {
+        color: red;
+      }
+
+      input::placeholder {
+        color: red;
+      }
+
+    </style>
   </head>
   <body>
-    <h1>鈴木さんのページです</h1>
-    <p>こんにちは</p>
-    <div class="box">BOX</div>
+  <input type="text" placeholder="名前">
+  <button disabled>ボタン</button>
+
   </body>
 </html>
