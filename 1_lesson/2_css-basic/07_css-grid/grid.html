@@ -16,15 +16,26 @@
 
       .container {
         height: 100%;
-        display: grid;
+        /* display: grid; */
 
-        grid-template:
+        /* grid-template:
           "title title" 40px
           "text box" 1fr /
-          1fr 500px;
+          1fr 500px; */
+
+        display: grid;
+        /* どういう行列区分にするか */
+        /* 行列の名前とサイズを入れる */
+        /* 2*2の行列作った */
+        /* 1frは余った分できるだけ大きく */
+        grid-template:
+          "title title" 60px /* １列目の高さ*/
+          "text box" 1fr /
+          1fr 500px; /*行の幅*/
       }
 
       .title {
+        /* テンプレのtitleの位置に配置 */
         grid-area: title;
         background-color: lightblue;
       }

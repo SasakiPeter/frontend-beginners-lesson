@@ -18,9 +18,27 @@
         height: 100%;
         display: grid;
         /* 3列 */
-        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: repeat(3, 1fr); */
         /* できるだけ敷き詰める */
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+
+        /* grid-template:
+          repeat(3, 100px) /
+          repeat(6, 1fr); */
+
+        /* grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+
+        /* grid-auto-rows: 100px; */
+
+        grid-template:
+          repeat(2, 100px) /
+          repeat(3, 100px);
+
+        /* justify-content: center;
+        align-content: center; */
+        /* 上２つ合わせたのがplace-content */
+        place-content: center;
 
         /* 隙間 */
         gap: 5px;
@@ -39,7 +57,7 @@
       <div class="box">3</div>
       <div class="box">4</div>
       <div class="box">5</div>
-      <div class="box">6</div>
+      <!-- <div class="box">6</div>
       <div class="box">7</div>
       <div class="box">8</div>
       <div class="box">9</div>
@@ -49,7 +67,7 @@
       <div class="box">13</div>
       <div class="box">14</div>
       <div class="box">15</div>
-      <div class="box">16</div>
+      <div class="box">16</div> -->
     </div>
   </body>
 </html>
