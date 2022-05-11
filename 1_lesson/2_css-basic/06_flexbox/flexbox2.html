@@ -6,6 +6,10 @@
     <style>
       .container {
         border: 1px solid #cccccc;
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+        gap: 12px;
       }
 
       .icon {
@@ -15,6 +19,10 @@
         object-fit: cover;
       }
 
+      .text {
+        /* これをつけられた要素はめいいっぱい広がろうとする */
+        flex-grow: 1;
+      }
     </style>
   </head>
   <body>
@@ -23,6 +31,7 @@
       <p class="text">
         こんにちは、私の名前は猫。好きな食べ物はりんごとバナナとぶどうよ。
       </p>
+      <!-- じょの -->
       <p class="arrow">➡️</p>
     </div>
   </body>

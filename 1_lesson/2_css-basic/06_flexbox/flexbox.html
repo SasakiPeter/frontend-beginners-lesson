@@ -6,6 +6,11 @@
     <style>
       .container {
         border: 2px solid red;
+        display: flex;
+        /* justify-content: flex-end; */
+        /* rightだと強制的に右だが、flex-endだとアラビア後のときに、文字の最後になるらしい */
+        justify-content: flex-end;
+        /* flex-direction: column; */
       }
 
       .box {
@@ -18,20 +23,40 @@
 
       .list {
         list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      /* .list li {
+        margin-left: 20px;
+      }
+      .list li:first-of-type {
+        margin-left: 0;
+      } */
+
+      .container_2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    <!-- 右から左に文字が書かれてますよ -->
+    <div class="container" dir="rtl">
       <div class="box">BOX1</div>
       <div class="box">BOX2</div>
       <div class="box">BOX3</div>
     </div>
 
+    <div class="container container_2" dir="rtl">
+      <div class="box">BOX</div>
+    </div>
+
     <ul class="list">
-      <li>りんご</li>
-      <li>バナナ</li>
-      <li>寿司</li>
+      <li><a href="#">りんご</a></li>
+      <li><a href="#">バナナ</a></li>
+      <li><a href="#">寿司</a></li>
     </ul>
   </body>
 </html>
