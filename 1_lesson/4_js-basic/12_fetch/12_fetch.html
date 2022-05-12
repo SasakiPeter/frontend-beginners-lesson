@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>データのフェッチとPromise</title>
+    <script>
+      // jsonを読み込んむよと
+      // api-urlとかもOK
+      // fetchもjsonも非同期処理
+      // thenでつないでるのは非同期処理
+      console.log("1");
+      // fetch("./human.json")
+      //   .then((response) => {
+      //     console.log(response);
+      //     return response.json();
+      //   })
+      //   .then((json) => {
+      //     // jsonって書いてあるけど、これオブジェクトな
+      //     console.log(json);
+      //   });
+
+      fetch("./human.json")
+        .then((response) => {
+          console.log(response);
+          return response.json().then((json) => {
+            const myFriendJson = json["friend-json"];
+            return fetch(myFriendJson).then((result2) => {
+              return result2.json();
+            });
+          });
+        })
+        .then((json) => {
+          console.log(json);
+        });
+      console.log("2");
+
+      const fetchData = async () => {
+        const result1 = await fetch("./human.json");
+        const json1 = await result1.json();
+        const myFriendJson = json1["friend-json"];
+        const result2 = await fetch(myFriendJson);
+        const json2 = await result2.json();
+        console.log(json2);
+      };
+
+      fetchData();
+    </script>
+  </head>
+  <body></body>
+</html>

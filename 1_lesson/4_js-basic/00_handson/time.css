@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-image: linear-gradient(rgb(76, 76, 76), rgb(23, 23, 23));
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.clock div {
+  display: flex;
+  align-items: flex-end;
+}
+
+.clock .time {
+  font-size: 2rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.clock .button {
+  background-color: transparent;
+  border: 2px solid white;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+}

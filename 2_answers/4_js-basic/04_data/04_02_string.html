@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>数値・文字列・真偽値</title>
+    <script>
+      const a = "マネー";
+      const b = "フォワード";
+      // 「マネーフォワード」という文字列を作ってください
+      console.log(a + b);
+
+      const c = 2;
+      const d = 5;
+      // 「2×5=10です」という文字列を作ってください（10は計算すること）
+      console.log(c + "×" + "d=" + c * d + "です");
+
+      const name = "鈴木さんは東京出身です";
+      // nameの長さは？
+      console.log(name.length);
+      console.log(Array.from(name).length);
+      // 「福岡」という文字が含まれているか？
+      console.log(name.includes("福岡"));
+      // 「出」という文字は何番目か？
+      console.log(name.indexOf("出"));
+      // 「田中」から始まっているか？
+      console.log(name.startsWith("田中"));
+    </script>
+  </head>
+  <body></body>
+</html>

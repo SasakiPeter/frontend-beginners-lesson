@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>配列</title>
+    <script>
+      // 鈴木, 田中, 後藤からなる配列を作ってください
+      // 2番目の値にアクセスしてください
+      // 2番目の値を「マリオ」に書き換えてください
+      const myArray = ["鈴木", "田中", "後藤", "佐々木"];
+      myArray[1] = "マリオ";
+
+      // すべての値を出力してください
+      for (const val of myArray) {
+        console.log(val);
+      }
+
+      myArray.forEach((val, idx) => {
+        console.log(val, idx);
+      });
+
+      // 「後藤」が含まれているか判定してください
+      console.log(myArray.includes("後藤"));
+
+      // indexのとき
+      console.log(myArray.indexOf("後藤"));
+
+      // すべての値に「さん」をつけてください
+      const myArray2 = myArray.map((x) => `${x}さん`);
+      console.log(myArray2);
+
+      // 「木」を含む要素を見つけてください
+      const result = myArray.find((val) => val.includes("木"));
+      console.log(result);
+
+      const result2 = myArray.filter((val) => val.includes("木"));
+      console.log(result2);
+
+      // 「森」を含む要素を見つけてください
+      console.log(myArray.filter((val) => val.includes("森")));
+
+      // 配列のマージ
+      const array = ["落合", "遠藤"];
+      const myArray3 = [...myArray, ...array];
+      console.log(myArray3);
+
+      // 100以上の値を検索
+      const nums = [10, 100, 1000, 10000, 5, 20];
+      console.log(nums.filter((val) => val >= 100));
+    </script>
+  </head>
+  <body></body>
+</html>

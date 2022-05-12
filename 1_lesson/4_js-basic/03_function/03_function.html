@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>関数の作り方</title>
+    <script>
+      // 関数の定義
+      // function myFunction(name, age) {
+      //   console.log("私の名前は" + name + "さんです。" + age + "歳です");
+      // }
+
+      const myFunction = (name, age) => {
+        console.log("私の名前は" + name + "さんです。" + age + "歳です");
+      };
+
+      // arrow関数だと、必ずここより前に宣言されていることが保証される
+      myFunction("鈴木", 10);
+
+      // ブラウザ組み込みの関数
+      console.log("hoge");
+
+      // 一定時間後に処理をする
+      const myCallback = () => {
+        console.log("hoge");
+      };
+
+      setTimeout(myCallback, 1000);
+
+      setTimeout(() => {
+        console.log("hoge");
+      }, 1000);
+
+      console.log("called");
+
+      setInterval(() => {
+        console.log("piyo");
+      }, 1000);
+
+      // オブジェクトを返す関数
+      // const myFunction4 = () => {
+      //   return {
+      //     age: 18,
+      //     name: "鈴木",
+      //   };
+      // };
+
+      // 確かに、わざわざreturnとか書かないよね
+      const myFunction4 = () => ({
+        age: 18,
+        name: "鈴木",
+      });
+
+      // 引数のデフォルト値
+      const Hoge = (name, age = 26) =>
+        console.log(`私の名前は${name}です。${age}歳です。`);
+
+      Hoge("田中");
+
+      // 可変長引数
+      const Fuga = (a, ...names) => {
+        for (const name of names) {
+          console.log(`名前は${name}です${a}`);
+        }
+      };
+
+      Fuga("鈴木", "田中", "落合", "佐藤");
+    </script>
+  </head>
+  <body></body>
+</html>

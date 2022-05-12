@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <script>
+    // オブジェクトの基本
+    const myPerson = {
+      // プロパティ（キー: 値）
+      name: "鈴木",
+      // プロパティ
+      age: 18,
+
+      address: "福岡",
+    };
+
+    // 名前は？
+    console.log(myPerson.name);
+
+    // 年齢は？
+    console.log(myPerson.age);
+
+    // 名前を田中に書き換えてください
+    myPerson.name = "田中";
+
+    // nicknameプロパティに「ジョン」を追加してください
+    console.log(Object.keys(myPerson));
+    console.log(Object.values(myPerson));
+    console.log(Object.entries(myPerson));
+
+    // for (const [k, v] in Object.entries(myPerson)) {
+    //   console.log(k, v, "hoge");
+    // }
+
+    Object.entries(myPerson).forEach(([k, v], i) => {
+      console.log(k, v);
+    });
+
+    // オブジェクトの分割代入
+    const { name: myName, age } = myPerson;
+    console.log(myName, age);
+
+    const object1 = {
+      name: "鈴木",
+    };
+    const object2 = {
+      age: 18,
+    };
+    console.log({ ...object1, ...object2 });
+
+    const f = ({ name, age }) => {
+      console.log(name);
+      console.log(age);
+    };
+    f(myPerson);
+
+    //
+    // // favoriteFoodプロパティに「いちご, りんご, バナナからなる配列」を追加してください
+    // // オブジェクトの基本
+    // const myPerson2 = {
+    //   name: "鈴木",
+    //   age: 18,
+    //   favoriteFood: ["いちご", "りんご", "バナナ"],
+    //   sayHello: () => {
+    //     console.log("こんにちは");
+    //   },
+    //   friend: {
+    //     name: "田中",
+    //     age: 18,
+    //   },
+    // };
+
+    // キーをすべて出力する
+    // 値をすべて出力する
+
+    // キーと値をすべて出力する
+    const entries = Object.entries(myPerson);
+    for (const entry of entries) {
+    }
+  </script>
+  <body></body>
+</html>

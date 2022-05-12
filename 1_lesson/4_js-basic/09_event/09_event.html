@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>イベント処理</title>
+  </head>
+  <body>
+    <div>
+      <button class="button">ボタン</button>
+    </div>
+    <p class="text">0</p>
+
+    <script>
+      // イベントの設定
+
+      document.querySelector(".button").addEventListener("click", (event) => {
+        console.log(event);
+        console.log(event.target);
+        document.querySelector(".text").innerHTML += 1;
+      });
+
+      // window.addEventListener("scroll", ()=>())
+
+      // mouseenterイベント
+
+      // クリックされた要素
+
+      // DOMContentLoadedイベント
+    </script>
+  </body>
+</html>
